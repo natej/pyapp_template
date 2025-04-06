@@ -1,5 +1,5 @@
-App Template
-============
+PyApp Template
+==============
 
 Summary
 -------

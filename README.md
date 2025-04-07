@@ -12,3 +12,10 @@ It includes:
 - Command-line arguments via argparse.
 - A config.ini file via ConfigParser.
 - App exceptions can be emailed. See config.ini. Currently, SMTP auth is not supported.
+
+Quick Start
+-----------
+
+1) See the function `run()`. Add any args you want logged to the `log_args` list.
+
+2) See the function `do_work()`. Start adding your application code here.

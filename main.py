@@ -25,6 +25,21 @@ stderr and the log file specified in the config file.
 log = logging.getLogger()
 
 
+def do_work(app):
+    # Start adding your application code here.
+    id(app)
+
+
+def run(app):
+    """Return status int for sys.exit()."""
+    log.info(f"{app.name} version {app.version}")
+    log_args = ["config"]
+    for arg_name in log_args:
+        log.info(f"{arg_name}: {getattr(app.args, arg_name)}")
+    do_work(app)
+    return 0
+
+
 def get_hostname():
     return socket.getfqdn()
 
@@ -53,21 +68,6 @@ def send_email(app, message):
         s.quit()
     except:
         log.error(f"error sending app exception email:\n{traceback.format_exc()}")
-
-
-def do_work(app):
-    # Start adding your application code here.
-    id(app)
-
-
-def run(app):
-    """Return status int for sys.exit()."""
-    log.info(f"{app.name} version {app.version}")
-    log_args = ["config"]
-    for arg_name in log_args:
-        log.info(f"{arg_name}: {getattr(app.args, arg_name)}")
-    do_work(app)
-    return 0
 
 
 def asbool(obj):

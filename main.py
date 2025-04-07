@@ -56,8 +56,8 @@ def send_email(app, message):
 
 
 def do_work(app):
+    # Start adding your application code here.
     id(app)
-    send_email(app, "Hello world")
 
 
 def run(app):

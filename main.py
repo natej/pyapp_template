@@ -41,7 +41,11 @@ def run(app):
 
 
 def get_hostname():
-    return socket.getfqdn()
+    ip6_name = "1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa"
+    name = socket.getfqdn()
+    if name == ip6_name:
+        name = socket.gethostname()
+    return name
 
 
 def send_email(app, message):

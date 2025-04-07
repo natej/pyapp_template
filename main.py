@@ -1,15 +1,15 @@
-import os
-import sys
-import types
 import argparse
 import configparser
-import pathlib
-import smtplib
 import email
-import socket
-import traceback
 import logging
 import logging.handlers
+import os
+import pathlib
+import smtplib
+import socket
+import sys
+import traceback
+import types
 
 __version__ = "0.1.0"
 

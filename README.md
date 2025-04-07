@@ -16,6 +16,8 @@ It includes:
 Quick Start
 -----------
 
-1) See the function `run()`. Add any args you want logged to the `log_args` list.
+1) Add any needed CLI args to `parse_command_line()`.
 
-2) See the function `do_work()`. Start adding your application code here.
+2) See the function `run()`. Add any args you want logged to the `log_args` list.
+
+3) See the function `do_work()`. Start adding your application code here.
